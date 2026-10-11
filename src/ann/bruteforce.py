@@ -20,7 +20,7 @@ def l2_distance(a: np.ndarray, b: np.ndarray) -> float:
     Returns:
         The Euclidean distance as a float.
     """
-    raise NotImplementedError
+    return np.sqrt(np.sum((a - b) ** 2))
 
 
 def knn_bruteforce(
