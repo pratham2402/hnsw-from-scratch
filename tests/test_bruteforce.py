@@ -3,7 +3,7 @@
 import numpy as np
 import pytest
 
-from ann import knn_bruteforce, l2_distance
+from hnsw import knn_bruteforce, l2_distance
 
 
 def test_l2_distance_on_a_known_pair():

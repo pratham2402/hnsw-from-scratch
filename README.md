@@ -1,8 +1,12 @@
-# ann — nearest-neighbour search from scratch
+# hnsw-from-scratch
 
 An implementation of approximate nearest-neighbour search in Python, progressing
 from exact brute-force search to HNSW, with benchmarks on SIFT1M against exact
 search and FAISS.
+
+**Status: work in progress.** Brute-force kNN is partly done — `l2_distance` is
+implemented but `knn_bruteforce` is not, so `pytest` is expected to be partially
+red until that milestone is finished.
 
 ## Why
 
@@ -28,8 +32,9 @@ is only correct to the extent that it agrees with brute force.
 ## Layout
 
 ```
-src/ann/     the library
-tests/       tests
+src/hnsw/    the library; `bruteforce.py` is the exact-search reference that
+             the approximate index is measured against
+tests/       one `test_<module>.py` per library module
 ```
 
 ## Usage
